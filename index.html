@@ -1,13 +1,39 @@
 <html>
-    <head>
-        <title> 
-            Curso de JavaScript
-        </title>
-    </head>
-    <Body> 
-        <script>
 
-/*              
+<head>
+    <title>
+        Curso de JavaScript
+    </title>
+</head>
+
+<Body>
+    <script>
+
+//Dado o seguinte vetor de objetos:
+var usuarios = [
+    {
+        nome: "Diego",
+        habilidades: ["Javascript", "ReactJS", "Redux"]
+    },
+    {
+        nome: "Gabriel",
+        habilidades: ["VueJS", "Ruby on Rails", "Elixir"]
+    }
+];
+
+// Escreva uma função que produza o seguinte resultado:
+//O Diego possui as habilidades: Javascript, ReactJS, Redux
+//O Gabriel possui as habilidades: VueJS, Ruby on Rails, Elixir
+function retonarUsuarios(usuarios) {
+
+    for (let value of usuarios) {
+            console.log(`O ${value.nome} possui as habilidades: ${value.habilidades}`);
+        }
+}
+
+retonarUsuarios(usuarios);
+
+    /*   /*              
 //          Condição ternária ela se aplica quando temos duas verificaçoes;
 
             var sexo = 'F';
@@ -33,11 +59,48 @@
                     default:
                         return 'OUTRO'
                         break;
+                        
+            // Escreva uma função que verifique se o vetor de habilidades passado possui a habilidade "Javascript"e retorna um booleano true/false caso exista ou não.
+    //Dica: para verificar se um vetor contém um valor, utilize o método indexOf.
+
+    function temHabilidade(skills) {
+
+        var booleano = (skills.indexOf('Javascript') >= 0) ? true : false;
+            console.log(booleano);
+        }
+
+    var skills = ["Javascript", "ReactJS", "React Native"];
+    
+    temHabilidade(skills); // true ou false
+
+    /*     //Crie uma função que dado um intervalo (entre x e y) exiba todos número pares:
+        function pares(x, y) {
+            while (x < y) {
+                if (x % 2 == 0) {
+                    console.log(x);
                 }
+                x++;
             }
-            var resultado = retornaSexo('F');
+        }
+        pares(32, 321);
+        /* var endereco = {
+            rua: "Rua dos pinheiros",
+            numero: 1293,
+            bairro: "Centro",
+            cidade: "São Paulo",
+            uf: "SP"
+        };
+
+        function retonaEndereço(endereco) {
+            var resultado = `O usuario mora em ${endereco.cidade} / ${endereco.uf} no bairro ${endereco.bairro} na rua ${endereco.rua} com o n° ${endereco.numero}`
+
             console.log(resultado);
-*/
-        </script>
-    </Body>
+        }
+
+        setTimeout(retonaEndereço(endereco), 3000);
+
+        //O usuário mora em São Paulo / SP, no bairro Centro, na rua "Rua dos Pinheiros" com nº 1293. */
+    </script>
+</Body>
+
 </html>
